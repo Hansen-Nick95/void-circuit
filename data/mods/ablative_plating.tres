@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ModDef" format=3]
+
+[ext_resource type="Script" path="res://src/core/mods/mod_def.gd" id="1_mod"]
+[ext_resource type="Script" path="res://src/core/mods/stat_mod.gd" id="2_stat"]
+
+[sub_resource type="Resource" id="StatMod_hull"]
+script = ExtResource("2_stat")
+stat = &"hull_max"
+op = 0
+value = 1.0
+
+[resource]
+script = ExtResource("1_mod")
+id = &"ablative_plating"
+display_name = "Ablative Plating"
+description = "+1 max hull."
+rarity = 0
+tags = Array[StringName]([&"hull"])
+stat_mods = Array[ExtResource("2_stat")]([SubResource("StatMod_hull")])

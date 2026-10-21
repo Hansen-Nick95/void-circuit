@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Tuning" format=3]
+
+[ext_resource type="Script" path="res://src/core/tuning.gd" id="1_tuning"]
+
+[resource]
+script = ExtResource("1_tuning")
+hover_height = 1.2
+hover_stiffness = 40.0
+align_speed = 8.0
+top_speed = 60.0
+acceleration = 25.0
+drag = 0.6
+steer_rate = 2.2
+drift_steer_mult = 1.6
+drift_grip = 0.35
+drift_boost_per_second = 0.25
+boost_speed_mult = 1.35
+boost_drain_per_second = 0.5
+start_hull = 5
+scrape_cooldown = 0.75

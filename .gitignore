@@ -1,0 +1,10 @@
+# Godot
+.godot/
+*.translation
+export/
+# Harness
+.tools/
+reports/
+# OS / editor
+.DS_Store
+*.swp

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ModDef" format=3]
+
+[ext_resource type="Script" path="res://src/core/mods/mod_def.gd" id="1_mod"]
+[ext_resource type="Script" path="res://src/core/mods/stat_mod.gd" id="2_stat"]
+
+[sub_resource type="Resource" id="StatMod_duration"]
+script = ExtResource("2_stat")
+stat = &"boost_duration"
+op = 1
+value = 1.2
+
+[resource]
+script = ExtResource("1_mod")
+id = &"afterburner_coil"
+display_name = "Afterburner Coil"
+description = "+20% boost duration."
+rarity = 0
+tags = Array[StringName]([&"boost"])
+stat_mods = Array[ExtResource("2_stat")]([SubResource("StatMod_duration")])
