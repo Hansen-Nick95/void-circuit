@@ -39,6 +39,9 @@ M0: Harness and toolchain (see docs/ROADMAP.md)
 - `make shots` also writes `frame.wav` (Movie Maker records audio). Harmless; reports/ is gitignored.
 
 ## Gotchas
+- Git doesn't store empty folders, so `scenes/race/`, `src/game/`, `tools/sim/` etc. don't exist in a
+  fresh clone until they contain a file. The Makefile uses `$(wildcard ...)` for lint paths for this reason.
+  Always verify harness changes from a fresh clone, not just the working copy.
 - Godot imports any `.csv` as a translation by default. `assets/CREDITS.csv.import` sets
   `importer="keep"` so the ledger stays a plain file. Do the same for any future data CSV.
 - The first `make import` on a fresh clone takes ~20 s and prints a lot (GUT's fonts). That's normal.

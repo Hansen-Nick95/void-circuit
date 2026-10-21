@@ -1,7 +1,7 @@
 # One entry point for every check. Same commands on macOS, in Claude cloud sessions and in CI.
 
 GDTOOLKIT_VERSION := 4.5.0
-SRC := src tests tools
+SRC := $(wildcard src tests tools)
 
 ifeq ($(shell uname -s),Darwin)
 GODOT ?= /Applications/Godot.app/Contents/MacOS/Godot
