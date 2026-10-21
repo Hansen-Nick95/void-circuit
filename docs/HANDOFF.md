@@ -7,7 +7,7 @@ M0: Harness and toolchain (see docs/ROADMAP.md)
 ## Status
 - [x] M0.1 Repo + Godot project (Godot 4.7.2, Mobile renderer, sensor landscape)
 - [x] M0.2 GUT 9.7.1 vendored, gdtoolkit 4.5.0, Makefile, setup.sh, untyped declarations = error
-- [ ] M0.3 CI green: workflow is committed, but its first run on GitHub hasn't been checked yet
+- [x] M0.3 CI green on GitHub (run #2; run #1 failed on a missing empty folder, see Gotchas)
 - [x] M0.4 Docs: CLAUDE.md, GDD, ROADMAP, HANDOFF, DECISIONS, MAC_SETUP
 - [ ] M0.5 SessionStart hook is committed (`.claude/settings.json` → `scripts/session-start.sh`).
       Still to do (human): set the Claude cloud environment's setup script, see "Cloud environment" below.
@@ -27,8 +27,7 @@ M0: Harness and toolchain (see docs/ROADMAP.md)
 1. **Mac (human):** follow docs/MAC_SETUP.md, clone, run `make setup && make check`. Report anything red.
 2. **Mac (human):** M0.7. Export `scenes/main.tscn` to your iPhone. Commit `export_presets.cfg`
    (it holds no secrets; Godot keeps credentials in `.godot/export_credentials.cfg`, which is gitignored).
-3. Confirm the first CI run is green on GitHub (M0.3).
-4. Start M1.1: hover controller in `src/game/vehicle/`, reading `Tuning`.
+3. Start M1.1: hover controller in `src/game/vehicle/`, reading `Tuning`.
 
 ## Needs device playtest (human answers inline)
 - Q: Does `make check` pass on the Mac with Godot.app 4.7.2? → A:
