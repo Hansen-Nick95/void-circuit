@@ -1,6 +1,6 @@
 # Void Circuit: Game Design
 
-Working title. Roguelike hover-racer for iPhone, landscape, 60 fps target.
+Working title. Roguelike hover-racer for iPhone and Steam (Windows/macOS/Linux), landscape, 60 fps target.
 A run takes about 20 minutes over 3 sectors, and each race is about 90 seconds (3 laps).
 
 ## Inspiration
@@ -28,9 +28,11 @@ Sector 3 Final makes you champion. Either way you're paid Salvage and return to 
 ## Feel and controls
 
 - **Auto-accelerate.** The player only steers, drifts and boosts.
-- **Steer:** hold the left or right half of the screen. Tilt steering is an option.
-- **Drift:** hold both halves. Drifting charges the boost meter.
-- **Boost:** a button in the bottom-right corner that spends the meter.
+- **Steer (touch):** hold the left or right half of the screen. Tilt steering is an option.
+- **Steer (gamepad/keyboard):** left stick or A/D keys. Triggers or shoulder buttons for drift.
+- **Drift (touch):** hold both halves. Drifting charges the boost meter.
+- **Drift (gamepad/keyboard):** hold drift trigger/key while steering.
+- **Boost:** a button in the bottom-right corner (touch) or mapped button/key that spends the meter.
 - **Camera:** chase cam with FOV that widens as speed rises. Bloom and fog hide the far track.
 - **No weapons in v1.** Racers hurt each other by ramming.
 - Every feel number lives in `data/tuning.tres`.
@@ -112,3 +114,15 @@ that meta upgrades should mostly widen your options rather than add raw power.
 - **Mods:** stat modifiers (`Stats.compute`: adds first, then multipliers) plus hook names fired via EventBus.
 - **Randomness:** `Rng.start_run(seed)`, then `Rng.stream("map")`, `Rng.stream("draft")` and so on.
 - **Save:** JSON in `user://profile.json` with `schema_version` and tested migrations.
+- **Input:** all gameplay input goes through Godot's InputMap so touch, gamepad and keyboard all work.
+  Touch UI elements auto-hide on desktop; gamepad/keyboard prompts auto-hide on mobile.
+
+## Platform targets
+
+| Platform | Renderer | Input | Distribution | Notes |
+|---|---|---|---|---|
+| iOS (iPhone) | Mobile | Touch (+ optional tilt) | App Store | Primary dev target during M0–M4 |
+| Windows / macOS / Linux | Forward+ | Keyboard + gamepad | Steam | Add export presets and Steamworks integration in M6 |
+
+Steam-specific work (GodotSteam addon, achievements, store page) is deferred to M6. Until then,
+keyboard and gamepad input should be kept working alongside touch so the desktop path stays viable.

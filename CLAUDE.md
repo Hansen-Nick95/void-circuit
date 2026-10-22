@@ -1,6 +1,6 @@
 # Void Circuit: guide for Claude
 
-Roguelike hover-racer for iOS, built in Godot 4 with GDScript.
+Roguelike hover-racer for iOS and Steam (Windows/macOS/Linux), built in Godot 4 with GDScript.
 **Read docs/HANDOFF.md first, every session.** Design: docs/GDD.md. Tasks: docs/ROADMAP.md.
 Past decisions and their reasons: docs/DECISIONS.md. Don't reopen them without a new reason.
 

@@ -60,7 +60,7 @@ hook then runs `scripts/setup.sh` automatically in cloud sessions.
 ## Kickoff prompt (paste into a new Claude Code session)
 
 ```
-You're continuing development of Void Circuit, a roguelike hover-racer for iOS in Godot 4.
+You're continuing development of Void Circuit, a roguelike hover-racer for iOS and Steam in Godot 4.
 
 1. Read CLAUDE.md, then docs/HANDOFF.md, then the current milestone in docs/ROADMAP.md.
    Skim docs/GDD.md for the parts that touch the task.

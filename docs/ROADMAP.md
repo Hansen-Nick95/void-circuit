@@ -64,10 +64,15 @@ The milestones are in order, and each ends with something playable. Put the task
 
 **Done when:** someone who isn't you plays a full run without needing help.
 
-## M6: Ship (1–2 weeks)
+## M6: Ship — iOS + Steam (2–3 weeks)
 - M6.1 Performance pass on the oldest iPhone available (target 60 fps)
-- M6.2 App icon, launch screen, store screenshots
+- M6.2 App icon, launch screen, store screenshots (iOS + Steam)
 - M6.3 App Store Connect listing, privacy label (no data collected), age rating
 - M6.4 TestFlight with friends, fix pass, submit
+- M6.5 Desktop export presets (Windows, macOS, Linux) with Forward+ renderer
+- M6.6 Keyboard + gamepad input polish, auto-hide touch UI on desktop
+- M6.7 GodotSteam integration (Steamworks SDK: achievements, overlay)
+- M6.8 Steam store page, Steamworks build upload, beta key distribution
+- M6.9 Steam release
 
-**Done when:** the game is live on the App Store.
+**Done when:** the game is live on the App Store and Steam.
